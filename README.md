@@ -42,7 +42,7 @@ relationship-predictor/
 Clone the repo and set up the environment:
 
 ```bash
-git clone https://github.com/yourusername/relationship-predictor.git
+git clone https://github.com/AnirbansarkarS/SINGLE-MINGLE-DETECTOR---Berschied.git
 cd relationship-predictor
 ```
 
