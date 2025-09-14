@@ -16,25 +16,6 @@ os.makedirs("models", exist_ok=True)
 # Load dataset
 df = pd.read_csv(DATA_PATH)
 
-# # Rename columns for consistency with app.py
-# rename_map = {
-#     "Daily_Instagram_Hours": "Instagram_Hours",
-#     "Male_Friends_Count": "Male_Friends",
-#     "Female_Friends_Count": "Female_Friends",
-#     "Party_Frequency_Monthly": "Party_Frequency",
-#     "Late_Night_Calls_Per_Week": "Late_Night_Talks",
-#     "Gym_Sessions_Per_Week": "Gym_Frequency",
-#     "Gaming_Hours_Weekly": "Gaming_Hours",
-#     "Shopping_Trips_Monthly": "Shopping_Frequency",
-#     "Travel_Frequency_Yearly": "Travel_Frequency",
-#     "Music_Listening_Hours_Daily": "Music_Hours",
-#     "Gender": "Gender"
-# }
-# df = df.rename(columns=rename_map)
-
-# # Features and target
-# X = df.drop(columns=["Status"])  # Status = 0 Single, 1 Committed
-# y = df["Status"]
 
 selected_features = [
     "Num_Male_Friends", "Num_Female_Friends", "Daily_Instagram_Hours",
@@ -62,3 +43,4 @@ print(classification_report(y_test, y_pred))
 # Save model
 joblib.dump(model, MODEL_PATH)
 print(f"✅ Model saved at {MODEL_PATH}")
+
